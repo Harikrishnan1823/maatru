@@ -1,0 +1,36 @@
+# Flutter
+mobile-app/.dart_tool/
+mobile-app/.flutter-plugins
+mobile-app/.flutter-plugins-dependencies
+mobile-app/build/
+mobile-app/*.iml
+mobile-app/.idea/
+
+# Android
+mobile-app/android/.gradle
+mobile-app/android/local.properties
+mobile-app/android/app/google-services.json
+
+# Spring Boot
+backend/target/
+backend/.gradle/
+backend/build/
+backend/*.jar
+backend/application-secrets.properties
+
+# Environment
+.env
+*.env
+secrets/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
