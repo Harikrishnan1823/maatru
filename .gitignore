@@ -30,6 +30,9 @@ backend/application-secrets.properties
 *.env
 secrets/
 
+# Documentation
+docs/
+
 # IDE
 .idea/
 .vscode/
