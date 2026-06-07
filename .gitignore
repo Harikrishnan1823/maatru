@@ -2,7 +2,14 @@
 mobile-app/.dart_tool/
 mobile-app/.flutter-plugins
 mobile-app/.flutter-plugins-dependencies
+mobile-app/.pub-cache/
 mobile-app/build/
+mobile-app/android/build/
+mobile-app/linux/flutter/generated_plugin_registrant.cc
+mobile-app/linux/flutter/generated_plugins.cmake
+mobile-app/macos/Flutter/GeneratedPluginRegistrant.swift
+mobile-app/windows/flutter/generated_plugin_registrant.cc
+mobile-app/windows/flutter/generated_plugins.cmake
 mobile-app/*.iml
 mobile-app/.idea/
 

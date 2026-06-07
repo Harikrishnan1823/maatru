@@ -4,6 +4,15 @@ import '../features/home/home_screen.dart';
 import '../features/favourites/favourites_screen.dart';
 import '../features/settings/settings_screen.dart';
 
+// Dummy History Screen for now
+class HistoryScreen extends StatelessWidget {
+  const HistoryScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(body: Center(child: Text('History')));
+  }
+}
+
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
@@ -15,6 +24,10 @@ final appRouter = GoRouter(
         GoRoute(
           path: '/',
           builder: (context, state) => const HomeScreen(),
+        ),
+        GoRoute(
+          path: '/history',
+          builder: (context, state) => const HistoryScreen(),
         ),
         GoRoute(
           path: '/favourites',
@@ -35,8 +48,9 @@ class MainShell extends StatelessWidget {
 
   int _currentIndex(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
-    if (location.startsWith('/favourites')) return 1;
-    if (location.startsWith('/settings')) return 2;
+    if (location.startsWith('/history')) return 1;
+    if (location.startsWith('/favourites')) return 2;
+    if (location.startsWith('/settings')) return 3;
     return 0;
   }
 
@@ -49,10 +63,15 @@ class MainShell extends StatelessWidget {
         onTap: (index) {
           switch (index) {
             case 0: context.go('/'); break;
-            case 1: context.go('/favourites'); break;
-            case 2: context.go('/settings'); break;
+            case 1: context.go('/history'); break;
+            case 2: context.go('/favourites'); break;
+            case 3: context.go('/settings'); break;
           }
         },
+        selectedItemColor: const Color(0xFF6B4EE6),
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -60,9 +79,14 @@ class MainShell extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star_outline),
+            icon: Icon(Icons.access_time),
+            activeIcon: Icon(Icons.access_time_filled),
+            label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star_border_outlined),
             activeIcon: Icon(Icons.star),
-            label: 'Favourites',
+            label: 'Favorites',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),

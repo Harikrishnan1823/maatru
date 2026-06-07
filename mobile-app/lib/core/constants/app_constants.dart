@@ -19,13 +19,13 @@ class AppConstants {
   ];
 
   // Scenarios
-  static const List<Map<String, String>> scenarios = [
-    {'id': 'hospital', 'name': 'Hospital', 'icon': '🏥'},
-    {'id': 'travel', 'name': 'Travel', 'icon': '✈️'},
-    {'id': 'emergency', 'name': 'Emergency', 'icon': '🚨'},
-    {'id': 'shopping', 'name': 'Shopping', 'icon': '🛒'},
-    {'id': 'restaurant', 'name': 'Restaurant', 'icon': '🍽️'},
-    {'id': 'daily', 'name': 'Daily', 'icon': '💬'},
+  static const List<Map<String, dynamic>> scenarios = [
+    {'id': 'hospital', 'name': 'Hospital', 'icon': '🏥', 'color': 0xFFD946EF}, // Pink/Purple
+    {'id': 'travel', 'name': 'Travel', 'icon': '✈️', 'color': 0xFF3B82F6}, // Blue
+    {'id': 'medicine', 'name': 'Medicine', 'icon': '💊', 'color': 0xFF10B981}, // Green
+    {'id': 'emergency', 'name': 'Emergency', 'icon': '🚨', 'color': 0xFFEF4444}, // Red
+    {'id': 'shopping', 'name': 'Shopping', 'icon': '🛒', 'color': 0xFFF59E0B}, // Orange
+    {'id': 'daily', 'name': 'Daily', 'icon': '💬', 'color': 0xFF8B5CF6}, // Indigo
   ];
 
   // Quick Emergency Phrases

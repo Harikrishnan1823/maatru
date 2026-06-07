@@ -45,7 +45,7 @@ dependencies:
   hive_flutter: ^1.1.0
 
   # Speech To Text
-  speech_to_text: ^6.6.2
+  speech_to_text: ^7.4.0
 
   # Text To Speech
   flutter_tts: ^3.8.5
@@ -57,7 +57,7 @@ dependencies:
   flutter_animate: ^4.5.0
 
   # Share
-  share_plus: ^9.0.0
+  share_plus: ^13.1.0
 
   # Icons
   cupertino_icons: ^1.0.6
@@ -68,3 +68,6 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   build_runner: ^2.4.9
   riverpod_generator: ^2.4.0
+
+flutter:
+  uses-material-design: true
